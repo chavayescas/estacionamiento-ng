@@ -1,0 +1,7 @@
+<td><input #min type="time" [(ngModel)]="minimo" name="minimo"></td>
+<td><input #max type="time" [(ngModel)]="maximo" name="maximo"></td>
+<td><input #cost type="number" [(ngModel)]="costo.costo"  name="costo"><input type="hidden" #id  value="{{costo.id}}"></td>
+<td>
+  <button type="button" name="guardar" class="btn btn-success" (click)="update(cost.value,min.value,max.value,id.value)">Guardar</button>
+<button type="button" name="guardar" class="btn btn-danger" (click)="delete(id.value)" >Borrar</button>
+</td>

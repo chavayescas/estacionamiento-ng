@@ -1,0 +1,25 @@
+<div class="row">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>desde </th>
+      <th>hasta</th>
+      <th>costo</th>
+      <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input #nuevoMinimo type="time" name="nuevoDesde" value=""></td>
+        <td><input #nuevoMaximo type="time" name="nuevoHasta" value=""></td>
+        <td><input #costo type="number" name="costo" value=""></td>
+        <td><button type="button" name="button" value="Guardar" class="btn btn-success" (click)="save(costo.value,nuevoMinimo.value,nuevoMaximo.value)">Guardar</button></td>
+      </tr>
+    <tr tr-costo  *ngFor = "let costo of costos; let i = index;trackBy:trackByIdx"
+    [costo] = "costo"
+    >
+
+    </tr>
+    </tbody>
+  </table>
+</div>

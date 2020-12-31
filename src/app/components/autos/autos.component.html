@@ -1,0 +1,41 @@
+<div class="row" style="padding-top:2vw;padding-bottom:2vw;">
+  <div class="col-sm">
+
+  </div>
+  <div class="col-sm">
+    <div class="form-check">
+      <input   [(checked)]="salida" class="form-check-input" type="checkbox" value="" (change)="conSalida()">
+      <label class="form-check-label" for="flexCheckDefault">
+        Con Salida
+      </label>
+    </div>
+  </div>
+  <div class="col-sm">
+  <input #fecha type="date" name="" [(ngModel)]="date" (ngModelChange) ="dateChange(fecha.value)">
+  </div>
+
+</div>
+<div class="row">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Placas</th>
+        <th>Fecha Entrada</th>
+        <th>Hora Entrada</th>
+        <th>Fecha Salida</th>
+        <th>Hora Salida</th>
+        <th>Total<th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let auto of autos">
+    <td>{{auto.placas}}</td>
+    <td>{{auto.fechaEntrada}}</td>
+    <td>{{auto.horaEntrada}}</td>
+    <td>{{auto.fechSalida}}</td>
+    <td>{{auto.horaSalida}}</td>
+    <td>{{auto.total}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
